@@ -1,50 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Personal Profile</title>
+  <link rel="stylesheet" href="css/grid.css?version=0.1">
+  <title>Personal Profile Webpage</title>
 </head>
 <body>
-    <h1>>My Personal Profile</h1>
-    <p>Welcome to my personal profile! Here, you'll learn a little bit about my education, experiences, hobbies, and dreams.</p>
 
-    <h2>Education / Achievements</h2>
+<div class="grid-container">
+  <div class="item1">
+    <h1>Personal Profile</h1>
+    <p>Welcome to my personal profile! Here, you'll learn a little bit about my education, experiences, hobbies, and dreams.</p>
+  </div>
+  <div class="item2">
+    <h2>Menu</h2>
     <ul>
-        <li>Completed Junior & Senior High School at Taguig National High School</li>
-        <li>Graduated Elementary School at Ricardo P. Cruz Sr. Elementary School</li>
+      <li><a href="#education">Education / Achievements</a></li>
+      <li><a href="#course">Course</a></li>
+      <li><a href="#it-experience">IT Experience</a></li>
+      <li><a href="#hobbies">Hobbies & Interests</a></li>
+      <li><a href="#goals">Goals In Life / Dream</a></li>
+      <li><a href="#gallery">Picture Gallery</a></li>
+    </ul>
+  </div>
+  <div class="item3">
+    <h2 id="education">Education / Achievements</h2>
+    <ul>
+      <li>Completed Junior & Senior High School at Taguig National High School</li>
+      <li>Graduated Elementary School at Ricardo P. Cruz Sr. Elementary School</li>
     </ul>
 
-    <h2>Course</h2>
+    <h2 id="course">Course</h2>
     <p>I am currently enhancing my skills through IT-related courses, focusing on <a href="https://www.w3schools.com/html/">HTML and Web Development</a>.</p>
 
-    <h2>IT Experience</h2>
+    <h2 id="it-experience">IT Experience</h2>
     <ul>
-        <li>Completed a Computer Security course</li>
-        <li>Participated in various IT seminars</li>
+      <li>Completed a Computer Security course</li>
+      <li>Participated in various IT seminars</li>
     </ul>
 
-    <h2>Hobbies & Interests</h2>
+    <h2 id="hobbies">Hobbies & Interests</h2>
     <ul>
-        <li>Playing volleyball</li>
-        <li>Dancing during my free time</li>
-        <li>Spending time with family and friends</li>
-        <li>Enjoying some "me time"</li>
+      <li>Playing volleyball</li>
+      <li>Dancing during my free time</li>
+      <li>Spending time with family and friends</li>
+      <li>Enjoying some "me time"</li>
     </ul>
 
-    <h2>Goals In Life / Dream</h2>
+    <h2 id="goals">Goals In Life / Dream</h2>
     <p>My dream is to be successful and earn a lot of money to support my loved ones and live a fulfilling life.</p>
 
-    <h2>Picture Gallery</h2>
+    <h2 id="gallery">Picture Gallery</h2>
     <table border="1">
-        <tr>
-            <td><img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t39.30808-6/447503091_18301180870080456_8940961367487749746_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEzrO9TvGIzaQhI8vLyJQtP913fyue8dSD3Xd_K57x1IBveZaHulVs8TvORS-Mle5x561hkcAVLXE1bs6lvqqTa&_nc_ohc=ek1p3TFHpBMQ7kNvgH5iEAw&_nc_zt=23&_nc_ht=scontent.fmnl30-1.fna&_nc_gid=A1ba2lzqPs943nDxZVqTWqk&oh=00_AYAkuCH8Cx5LV7iZIF9la490FLNaTi1rJplrUKWEZp-rRA&oe=674E51B5" alt="Volleyball"></td>
-            <td><img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.6435-9/104289057_946905349090086_6102207259613934252_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEF4sJXqUM3wMCiE6ZXLjc2qsqBFcKCj16qyoEVwoKPXlw-hd2Ixs26VltZPlu9CTOOwP7EPCKxsn9Sf-NdZXeM&_nc_ohc=MO-hsEzqxwcQ7kNvgHl8B_s&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=AsqprLLBzQIfgxPHw6DwXQD&oh=00_AYCfrJEZgk9N8oDfZ_sEriPr5yLxROC1yYhRI423f5cnyA&oe=676FD136" alt="Dancing"></td>
-        </tr>
-        <tr>
-            <td><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/437789709_709090067841800_9053206380109999492_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEmK43-vyGq60-yMz7V5uFVxPO4blycrYvE87huXJyti25l3SuxjhJncKglY46UwaOHD_xtxBiLRzN1aDSQCGeN&_nc_ohc=tXGZ2tgKE2gQ7kNvgEgKCkz&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QFezmdJKYYGP4RV5iSxDUuIWD58Vb_DOt20B2FaaelZlw&oe=676FCFB2" alt="Family time"></td>
-            <td><img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-6/383849361_1744692389311374_3670557594241812233_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFMz3wVzWNEixRxdOcVAF4zfHpJepuT8DN8ekl6m5PwM8Vsxt1IZrPvOvcMLjAdexCAQrGZ4vAm8A3tPC7inCQK&_nc_ohc=hd2ZXBRVuWsQ7kNvgGSCrHP&_nc_zt=23&_nc_ht=scontent.fmnl30-3.fna&_nc_gid=Ae_lZJb8VnZ4Xox8wCU61Ka&oh=00_AYDBTvjVbTQW9PSt3OMv50wS9Q9oaqhPXZP1HhKYp-y08g&oe=674E371A" alt="Me time"></td>
-        </tr>
+      <tr>
+        <td><img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t39.30808-6/447503091_18301180870080456_8940961367487749746_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEzrO9TvGIzaQhI8vLyJQtP913fyue8dSD3Xd_K57x1IBveZaHulVs8TvORS-Mle5x561hkcAVLXE1bs6lvqqTa&_nc_ohc=ek1p3TFHpBMQ7kNvgH5iEAw&_nc_zt=23&_nc_ht=scontent.fmnl30-1.fna&_nc_gid=A1ba2lzqPs943nDxZVqTWqk&oh=00_AYAkuCH8Cx5LV7iZIF9la490FLNaTi1rJplrUKWEZp-rRA&oe=674E51B5" alt="Volleyball"></td>
+        <td><img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.6435-9/104289057_946905349090086_6102207259613934252_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEF4sJXqUM3wMCiE6ZXLjc2qsqBFcKCj16qyoEVwoKPXlw-hd2Ixs26VltZPlu9CTOOwP7EPCKxsn9Sf-NdZXeM&_nc_ohc=MO-hsEzqxwcQ7kNvgHl8B_s&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=AsqprLLBzQIfgxPHw6DwXQD&oh=00_AYCfrJEZgk9N8oDfZ_sEriPr5yLxROC1yYhRI423f5cnyA&oe=676FD136" alt="Dancing"></td>
+      </tr>
+      <tr>
+        <td><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/437789709_709090067841800_9053206380109999492_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEmK43-vyGq60-yMz7V5uFVxPO4blycrYvE87huXJyti25l3SuxjhJncKglY46UwaOHD_xtxBiLRzN1aDSQCGeN&_nc_ohc=tXGZ2tgKE2gQ7kNvgEgKCkz&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QFezmdJKYYGP4RV5iSxDUuIWD58Vb_DOt20B2FaaelZlw&oe=676FCFB2" alt="Family time"></td>
+        <td><img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-6/383849361_1744692389311374_3670557594241812233_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFMz3wVzWNEixRxdOcVAF4zfHpJepuT8DN8ekl6m5PwM8Vsxt1IZrPvOvcMLjAdexCAQrGZ4vAm8A3tPC7inCQK&_nc_ohc=hd2ZXBRVuWsQ7kNvgGSCrHP&_nc_zt=23&_nc_ht=scontent.fmnl30-3.fna&_nc_gid=Ae_lZJb8VnZ4Xox8wCU61Ka&oh=00_AYDBTvjVbTQW9PSt3OMv50wS9Q9oaqhPXZP1HhKYp-y08g&oe=674E371A" alt="Me time"></td>
+      </tr>
     </table>
+  </div>
+  <div class="item4">
+    <h2>Right</h2>
+    </div>
+  <div class="item5">
+    <h2>Footer</h2>
+    </div>
+</div>
 
-    <p>For more information about HTML basics, visit <a href="https://www.w3schools.com/html/">W3Schools</a>.</p>
 </body>
 </html>
