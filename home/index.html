@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jericho Alba | Personal Profile</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
 
@@ -63,16 +64,30 @@
 
   <aside class="sidebar">
     <h2>Picture Gallery</h2>
-    <div class="picture-gallery">
-      <img src="images/image1.jpg" alt="Image 1">
-      <img src="images/image2.jpg" alt="Image 2">
-      <img src="images/image3.jpg" alt="Image 3">
+    <div id="gallery" class="picture-gallery">
+      <div v-for="image in images" :key="image.id" class="gallery-item">
+        <img :src="image.src" :alt="image.alt">
+      </div>
     </div>
   </aside>
 
   <footer class="footer">
     <p>&copy; 2025 Jericho Alba. All rights reserved.</p>
+    <p>Resources: Personal Photos</p>
   </footer>
+
+  <script>
+    new Vue({
+      el: '#gallery',
+      data: {
+        images: [
+          { id: 1, src: 'images/image1.jpg', alt: 'Image 1' },
+          { id: 2, src: 'images/image2.jpg', alt: 'Image 2' },
+          { id: 3, src: 'images/image3.jpg', alt: 'Image 3' }
+        ]
+      }
+    });
+  </script>
 
 </body>
 </html>

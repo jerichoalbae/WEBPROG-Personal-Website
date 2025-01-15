@@ -63,6 +63,9 @@ body {
 /* Main Sections */
 .main {
   margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .section {
@@ -71,6 +74,7 @@ body {
   margin: 20px 0;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  flex: 1 1 45%; /* Flexbox: take up 45% of the container */
 }
 
 .section h2 {
@@ -94,6 +98,7 @@ ul {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 100%; /* Make sidebar take full width on small screens */
 }
 
 .picture-gallery {
@@ -133,4 +138,28 @@ ul {
 
 .footer a:hover {
   color: #ff69b4; /* Light pink */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .section {
+    flex: 1 1 100%; /* Full width for small screens */
+  }
+
+  .picture-gallery {
+    flex-direction: column;
+  }
+
+  .picture-gallery img {
+    width: 80%; /* Larger images on smaller screens */
+    margin-bottom: 10px;
+  }
 }
