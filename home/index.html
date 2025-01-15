@@ -1,8 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/flexbox-grid.css?version=0.1"> 
-    <title>Flexbox and Grid</title>
+    <title>Personal Profile Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1em;
+        }
+        .main-content {
+            flex: 3;
+            padding: 1em;
+        }
+        .main-content div {
+            margin-bottom: 1em;
+            background: #e6f7ff;
+            padding: 1em;
+            border-radius: 5px;
+        }
+        .sidebar {
+            flex: 1;
+            padding: 1em;
+            background: #f9f9f9;
+            border-left: 2px solid #ccc;
+        }
+        .sidebar table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 1em;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,7 +82,7 @@
                 </ul>
             </div>
             <div>3 <br>Course
-                <p>I am currently enhancing my skills through IT-related courses, focusing on <a href="https://www.w3schools.com/html/">HTML and Web Development</a>.</p>
+                <p>I am currently enhancing my skills through IT-related courses, focusing on <a href="https://www.w3schools.com/html/" target="_blank">HTML and Web Development</a>.</p>
             </div>  
             <div>4 <br>IT Experience
                 <ul>
@@ -40,10 +101,21 @@
             <div>6 <br>Goals In Life / Dream
                 <p>My dream is to be successful and earn a lot of money to support my loved ones and live a fulfilling life.</p>
             </div>
-            <div>7</div>
         </section>
         <aside class="sidebar">
             <h2>Picture Gallery</h2>
             <table border="1">
                 <tr>
-                    <td><img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t39.30808-6/447503091_18301180870080456_8940961367487749746_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEzrO9TvGIzaQhI8vLyJQtP913fyue8dSD3Xd_K57x1IBveZaHulVs8TvORS-Mle5x561hkcAVL
+                    <td><img src="https://via.placeholder.com/150" alt="Placeholder Image"></td>
+                </tr>
+            </table>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2025 Jericho Alba. All rights reserved.</p>
+        <p>Resources: <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>, Personal Photos</p>
+    </footer>
+</div>
+
+</body>
+</html>

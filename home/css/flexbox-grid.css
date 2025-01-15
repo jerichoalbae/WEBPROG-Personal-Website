@@ -1,41 +1,81 @@
+/* General container layout */
 .container {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-  }
-  
-  header, footer {
-    background-color: #f0f0f0;
-    padding: 20px;
-  }
-  
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  gap: 10px;
+}
+
+/* Header and footer styling */
+header, footer {
+  background-color: #0073e6;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Main content layout */
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* Main content styling */
+.main-content {
+  flex: 3;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.main-content > div {
+  background-color: #e6f7ff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(33% - 20px); /* Adjust for three columns */
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar styling */
+.sidebar {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-left: 2px solid #ccc;
+}
+
+/* Sidebar table and image styling */
+.sidebar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sidebar img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Footer styling */
+footer {
+  font-size: 14px;
+  padding: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
   main {
-    display: flex;
-    flex-direction: row;
+      flex-direction: column;
   }
-  
-  .main-content {
-    flex: 2;
-    background-color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
 
-    .main-content > div {
-        background-color: #f1f1f1;
-        width: 300px;
-        margin: 10px;
-        text-align: center;
-        line-height: 35px;
-        font-size: 30px;
-      }
-
-
-
+  .main-content > div {
+      width: 100%;
   }
-  
-  .sidebar {
-    flex: 1;
-    background-color: #f5f5f5;
-    padding: 20px;
-  }
+}
