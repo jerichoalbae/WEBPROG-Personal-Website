@@ -1,93 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jericho Alba | Personal Profile</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/flexbox-grid.css?version=0.1"> 
+    <title>Personal Profile Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1em;
+        }
+        .main-content {
+            flex: 3;
+            padding: 1em;
+        }
+        .main-content div {
+            margin-bottom: 1em;
+            background: #e6f7ff;
+            padding: 1em;
+            border-radius: 5px;
+        }
+        .sidebar {
+            flex: 1;
+            padding: 1em;
+            background: #f9f9f9;
+            border-left: 2px solid #ccc;
+        }
+        .sidebar table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 1em;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-  <header class="header">
-    <h1>Jericho Alba</h1>
-    <p>Welcome to my personal profile!</p>
-  </header>
-
-  <nav class="nav">
-    <ul>
-      <li><a href="#about-me">About Me</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#hobbies">Hobbies</a></li>
-      <li><a href="#goals">Goals</a></li>
-    </ul>
-  </nav>
-
-  <main class="main">
-    <section id="about-me" class="section">
-      <h2>About Me</h2>
-      <p>...</p>
-    </section>
-
-    <section id="education" class="section">
-      <h2>Education</h2>
-      <ul>
-        <li>Completed Junior & Senior High School at Taguig National High School</li>
-        <li>Graduated Elementary School at Ricardo P. Cruz Sr. Elementary School</li>
-      </ul>
-    </section>
-
-    <section id="experience" class="section">
-      <h2>Experience</h2>
-      <ul>
-        <li>Completed a Computer Security course</li>
-        <li>Participated in various IT seminars</li>
-      </ul>
-    </section>
-
-    <section id="hobbies" class="section">
-      <h2>Hobbies</h2>
-      <ul>
-        <li>Playing volleyball</li>
-        <li>Dancing during my free time</li>
-        <li>Spending time with family and friends</li>
-        <li>Enjoying some "me time"</li>
-      </ul>
-    </section>
-
-    <section id="goals" class="section">
-      <h2>Goals</h2>
-      <p>My dream is to be successful and earn a lot of money to support my loved ones and live a fulfilling life.</p>
-    </section>
-  </main>
-
-  <aside class="sidebar">
-    <h2>Picture Gallery</h2>
-    <div id="gallery" class="picture-gallery">
-      <div v-for="image in images" :key="image.id" class="gallery-item">
-        <img :src="image.src" :alt="image.alt">
-      </div>
-    </div>
-  </aside>
-
-  <footer class="footer">
-    <p>&copy; 2025 Jericho Alba. All rights reserved.</p>
-    <p>Resources: Personal Photos</p>
-  </footer>
-
-  <script>
-    new Vue({
-      el: '#gallery',
-      data: {
-        images: [
-          { id: 1, src: 'images/image1.jpg', alt: 'Image 1' },
-          { id: 2, src: 'images/image2.jpg', alt: 'Image 2' },
-          { id: 3, src: 'images/image3.jpg', alt: 'Image 3' }
-        ]
-      }
-    });
-  </script>
+<div class="container">
+    <header>
+        <h1>Personal Profile Web Page</h1>
+        <p>Welcome to my personal profile! Here, you'll learn a little bit about my education, experiences, hobbies, and dreams.</p>
+    </header>
+    <main>
+        <section class="main-content">
+            <div>1 <br>About Me</div>
+            <div>2 <br>Education / Achievements
+                <ul>
+                    <li>Completed Junior & Senior High School at Taguig National High School</li>
+                    <li>Graduated Elementary School at Ricardo P. Cruz Sr. Elementary School</li>
+                </ul>
+            </div>
+            <div>3 <br>Course
+                <p>I am currently enhancing my skills through IT-related courses, focusing on <a href="https://www.w3schools.com/html/" target="_blank">HTML and Web Development</a>.</p>
+            </div>  
+            <div>4 <br>IT Experience
+                <ul>
+                    <li>Completed a Computer Security course</li>
+                    <li>Participated in various IT seminars</li>
+                </ul>
+            </div>
+            <div>5 <br>Hobbies & Interests
+                <ul>
+                    <li>Playing volleyball</li>
+                    <li>Dancing during my free time</li>
+                    <li>Spending time with family and friends</li>
+                    <li>Enjoying some "me time"</li>
+                </ul>
+            </div>
+            <div>6 <br>Goals In Life / Dream
+                <p>My dream is to be successful and earn a lot of money to support my loved ones and live a fulfilling life.</p>
+            </div>
+        </section>
+        <aside class="sidebar">
+            <h2>Picture Gallery</h2>
+            <table border="1">
+                <tr>
+                    <td><img src="https://github.com/jerichoalbae/WEBPROG-Personal-Website/blob/feauture/2_JAA_customize_my_website/home/css/Image.jpeg?raw=true" alt="Personal Image"></td>
+                </tr>
+            </table>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2025 Jericho Alba. All rights reserved.</p>
+        <p>Resources: <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>, Personal Photos</p>
+    </footer>
+</div>
 
 </body>
 </html>
