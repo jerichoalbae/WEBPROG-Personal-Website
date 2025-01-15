@@ -1,4 +1,12 @@
-/* General container layout */
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark gray text */
+}
+
 .container {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -6,76 +14,20 @@
   gap: 10px;
 }
 
-/* Header and footer styling */
-header, footer {
-  background-color: #0073e6;
-  color: white;
+/* Header styles */
+.header {
+  background-color: #4285F4; /* Light blue background */
+  color: white; /* White text */
   text-align: center;
   padding: 20px;
+  font-size: 20px; /* Increase font size */
 }
 
-/* Main content layout */
-main {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-/* Main content styling */
-.main-content {
-  flex: 3;
-  background-color: #fff;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.main-content > div {
-  background-color: #e6f7ff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: calc(33% - 20px); /* Adjust for three columns */
-  box-sizing: border-box;
-  text-align: center;
-  padding: 10px;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-/* Sidebar styling */
-.sidebar {
-  flex: 1;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-left: 2px solid #ccc;
-}
-
-/* Sidebar table and image styling */
-.sidebar table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.sidebar img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-/* Footer styling */
-footer {
-  font-size: 14px;
+/* Navigation styles */
+.nav {
+  background-color: #e0e0e0; /* Light gray background */
   padding: 10px;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  main {
-      flex-direction: column;
-  }
-
-  .main-content > div {
-      width: 100%;
-  }
-}
+.nav ul {
+  list-style: none; /*
