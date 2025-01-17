@@ -20,6 +20,7 @@ main {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  padding: 20px;
 }
 
 /* Main content styling */
@@ -32,6 +33,7 @@ main {
   gap: 20px;
 }
 
+/* Styling for each content section */
 .main-content > div {
   background-color: #e6f7ff;
   border: 1px solid #ccc;
@@ -119,6 +121,39 @@ footer {
   color: #007bff; /* Add a hover effect if desired */
 }
 
+/* Resources Section */
+#resources {
+  background-color: #e6f7ff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#resources h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#resources ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#resources ul li {
+  margin: 10px 0;
+}
+
+#resources ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+#resources ul li a:hover {
+  text-decoration: underline;
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   main {
@@ -127,5 +162,10 @@ footer {
 
   .main-content > div {
       width: 100%;
+  }
+
+  .sidebar {
+      flex: 1;
+      margin-top: 20px;
   }
 }
