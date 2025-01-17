@@ -42,19 +42,18 @@ main {
   padding: 10px;
   font-size: 18px;
   line-height: 1.5;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  transition: transform 0.3s ease; /* Smooth transition for hover and click effects */
 }
 
-/* Hover effect for columns */
+/* Hover effect */
 .main-content > div:hover {
-  transform: scale(1.05); /* Slightly enlarges the column */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+  transform: scale(1.05); /* Slightly enlarge the column */
 }
 
-/* Active (clicked) effect */
+/* Active class for click effect */
 .main-content > div.active {
-  transform: scale(1.1); /* Slightly larger scale when clicked */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  transform: scale(1.1); /* Enlarge the column when clicked */
+  border-color: #ff6f61; /* Change border color to indicate click */
 }
 
 /* Sidebar styling */
