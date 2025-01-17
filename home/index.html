@@ -12,31 +12,40 @@
         <header class="fadeIn">
             <h1>Jericho Alba Web Page</h1>
             <p>Welcome to my personal profile! Here, you'll learn a little bit about my education, experiences, hobbies, and dreams.</p>
+            <!-- Navigation links -->
+            <p>
+                <a href="#aboutMe">About Me</a> ♥ 
+                <a href="#education">Education / Achievements</a> ♥ 
+                <a href="#course">Course</a> ♥ 
+                <a href="#itExperience">IT Experience</a> ♥ 
+                <a href="#hobbies">Hobbies & Interests</a> ♥ 
+                <a href="#goals">Goals In Life / Dream</a> ♥
+            </p>
         </header>
         <main>
             <section class="main-content slideIn">
-                <div>1 <br>About Me
+                <div id="aboutMe">1 <br>About Me
                     <p>"The purpose of my life is not to be happy. It is to be useful, to be honorable, to be compassionate, to have it make some difference that you have lived and lived well."</p>
                 </div>
-                <div>2 <br>Education / Achievements
+                <div id="education">2 <br>Education / Achievements
                     <ul>
                         <li>Completed Junior & Senior High School at Taguig National High School</li>
                         <li>Graduated Elementary School at Ricardo P. Cruz Sr. Elementary School</li>
                     </ul>
                 </div>
-                <div>3 <br>Course
+                <div id="course">3 <br>Course
                     <p>I am currently enhancing my skills through IT-related courses, focusing on <a href="https://www.w3schools.com/html/" target="_blank">HTML and Web Development</a>.</p>
                 </div>  
-                <div>4 <br>IT Experience
+                <div id="itExperience">4 <br>IT Experience
                     <ul>
                         <li>Completed a Computer Security course</li>
                         <li>Participated in various IT seminars</li>
                     </ul>
                 </div>
-                <div>5 <br>Hobbies & Interests
+                <div id="hobbies">5 <br>Hobbies & Interests
                     <p>My hobbies and interests are diverse and constantly evolving. I enjoy playing volleyball, which allows me to stay active and connect with others in a team environment. I also love dancing during my free time, which helps me express myself creatively and stay fit. Spending quality time with family and friends is essential to me, as it strengthens relationships and brings joy. Additionally, I value my "me time," where I can unwind, reflect, and recharge for the challenges ahead.</p>
                 </div>
-                <div>6 <br>Goals In Life / Dream
+                <div id="goals">6 <br>Goals In Life / Dream
                     <p>My dream is to be successful and earn a lot of money to support my loved ones and live a fulfilling life.</p>
                 </div>
             </section>
@@ -54,20 +63,5 @@
             <p>To live is the rarest thing in the world. Thank you for visiting my webpage.</p>
         </footer>
     </div>
-
-    <!-- JavaScript for the click effect -->
-    <script>
-        // Add event listener to each column
-        document.querySelectorAll('.main-content > div').forEach(function (column) {
-            column.addEventListener('click', function () {
-                // Remove 'active' class from all columns
-                document.querySelectorAll('.main-content > div').forEach(function (col) {
-                    col.classList.remove('active');
-                });
-                // Add 'active' class to the clicked column
-                column.classList.add('active');
-            });
-        });
-    </script>
 </body>
 </html>

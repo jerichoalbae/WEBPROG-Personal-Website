@@ -4,6 +4,7 @@
   grid-template-rows: auto 1fr auto;
   height: 100vh;
   gap: 10px;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 /* Header and footer styling */
@@ -42,18 +43,18 @@ main {
   padding: 10px;
   font-size: 18px;
   line-height: 1.5;
-  transition: transform 0.3s ease; /* Smooth transition for hover and click effects */
+  transition: transform 0.3s ease; /* Smooth transformation on hover */
 }
 
-/* Hover effect */
+/* Hover effect for columns */
 .main-content > div:hover {
-  transform: scale(1.05); /* Slightly enlarge the column */
+  transform: scale(1.05); /* Slightly enlarge the column on hover */
 }
 
-/* Active class for click effect */
+/* Active state for clicked columns */
 .main-content > div.active {
+  background-color: #ffebcc; /* Change background when clicked */
   transform: scale(1.1); /* Enlarge the column when clicked */
-  border-color: #ff6f61; /* Change border color to indicate click */
 }
 
 /* Sidebar styling */
@@ -115,10 +116,10 @@ footer {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   main {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .main-content > div {
-      width: 100%;
+    width: 100%;
   }
 }
