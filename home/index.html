@@ -54,5 +54,20 @@
             <p>To live is the rarest thing in the world. Thank you for visiting my webpage.</p>
         </footer>
     </div>
+
+    <!-- JavaScript for the click effect -->
+    <script>
+        // Add event listener to each column
+        document.querySelectorAll('.main-content > div').forEach(function (column) {
+            column.addEventListener('click', function () {
+                // Remove 'active' class from all columns
+                document.querySelectorAll('.main-content > div').forEach(function (col) {
+                    col.classList.remove('active');
+                });
+                // Add 'active' class to the clicked column
+                column.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
