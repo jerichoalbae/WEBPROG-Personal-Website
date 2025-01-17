@@ -12,19 +12,21 @@
         <header class="fadeIn">
             <h1>Jericho Alba Web Page</h1>
             <p>Welcome to my personal profile! Here, you'll learn a little bit about my education, experiences, hobbies, and dreams.</p>
-            <!-- Navigation links -->
-            <p>
-                <a href="#aboutMe">About Me</a> ♥ 
-                <a href="#education">Education / Achievements</a> ♥ 
-                <a href="#course">Course</a> ♥ 
-                <a href="#itExperience">IT Experience</a> ♥ 
-                <a href="#hobbies">Hobbies & Interests</a> ♥ 
-                <a href="#goals">Goals In Life / Dream</a> ♥
-            </p>
+            
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="#about-me">About Me</a> ♥
+                <a href="#education">Education / Achievements</a> ♥
+                <a href="#course">Course</a> ♥
+                <a href="#it-experience">IT Experience</a> ♥
+                <a href="#hobbies">Hobbies & Interests</a> ♥
+                <a href="#goals">Goals In Life / Dream</a>
+            </div>
         </header>
+
         <main>
             <section class="main-content slideIn">
-                <div id="aboutMe">1 <br>About Me
+                <div id="about-me">1 <br>About Me
                     <p>"The purpose of my life is not to be happy. It is to be useful, to be honorable, to be compassionate, to have it make some difference that you have lived and lived well."</p>
                 </div>
                 <div id="education">2 <br>Education / Achievements
@@ -36,7 +38,7 @@
                 <div id="course">3 <br>Course
                     <p>I am currently enhancing my skills through IT-related courses, focusing on <a href="https://www.w3schools.com/html/" target="_blank">HTML and Web Development</a>.</p>
                 </div>  
-                <div id="itExperience">4 <br>IT Experience
+                <div id="it-experience">4 <br>IT Experience
                     <ul>
                         <li>Completed a Computer Security course</li>
                         <li>Participated in various IT seminars</li>
@@ -58,10 +60,26 @@
                 </table>
             </aside>
         </main>
+
         <footer class="fadeIn">
             <p>&copy; 2025 Jericho Alba. All rights reserved.</p>
             <p>To live is the rarest thing in the world. Thank you for visiting my webpage.</p>
         </footer>
     </div>
+
+    <!-- JavaScript for the click effect -->
+    <script>
+        // Add event listener to each column
+        document.querySelectorAll('.main-content > div').forEach(function (column) {
+            column.addEventListener('click', function () {
+                // Remove 'active' class from all columns
+                document.querySelectorAll('.main-content > div').forEach(function (col) {
+                    col.classList.remove('active');
+                });
+                // Add 'active' class to the clicked column
+                column.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>

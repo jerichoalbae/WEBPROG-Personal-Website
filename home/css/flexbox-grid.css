@@ -4,7 +4,6 @@
   grid-template-rows: auto 1fr auto;
   height: 100vh;
   gap: 10px;
-  scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 /* Header and footer styling */
@@ -43,18 +42,6 @@ main {
   padding: 10px;
   font-size: 18px;
   line-height: 1.5;
-  transition: transform 0.3s ease; /* Smooth transformation on hover */
-}
-
-/* Hover effect for columns */
-.main-content > div:hover {
-  transform: scale(1.05); /* Slightly enlarge the column on hover */
-}
-
-/* Active state for clicked columns */
-.main-content > div.active {
-  background-color: #ffebcc; /* Change background when clicked */
-  transform: scale(1.1); /* Enlarge the column when clicked */
 }
 
 /* Sidebar styling */
@@ -113,13 +100,32 @@ footer {
   }
 }
 
+/* Navigation links styling */
+.nav-links {
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  margin: 0 15px;
+}
+
+.nav-links a:hover {
+  color: #007bff; /* Add a hover effect if desired */
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   main {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .main-content > div {
-    width: 100%;
+      width: 100%;
   }
 }
