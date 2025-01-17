@@ -21,8 +21,6 @@
                 <a href="#it-experience">IT Experience</a> ♥
                 <a href="#hobbies">Hobbies & Interests</a> ♥
                 <a href="#goals">Goals In Life / Dream</a> ♥
-                <a href="#guestbook">Guestbook</a> ♥
-                <a href="#contact">Contact</a> ♥
                 <a href="#resources">Resources</a>
             </div>
         </header>
@@ -53,43 +51,7 @@
                 <div id="goals">6 <br>Goals In Life / Dream
                     <p>My dream is to be successful and earn a lot of money to support my loved ones and live a fulfilling life.</p>
                 </div>
-
-                <!-- Guestbook Section -->
-                <div id="guestbook">
-                    <h2>Guestbook</h2>
-                    <div id="guestbook-app">
-                        <form @submit.prevent="addMessage">
-                            <input type="text" v-model="name" placeholder="Your Name" required>
-                            <textarea v-model="message" placeholder="Your Message" required></textarea>
-                            <button type="submit">Sign Guestbook</button>
-                        </form>
-                        <ul>
-                            <li v-for="entry in guestbook" :key="entry.id">
-                                <strong>{{ entry.name }}</strong>: {{ entry.message }}
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Contact Section -->
-                <div id="contact">
-                    <h2>Contact</h2>
-                    <p>Email: <a href="mailto:jaalba@student.apc.edu.ph">jaalba@student.apc.edu.ph</a></p>
-                </div>
-
-                <!-- Resources Section -->
-                <div id="resources">
-                    <h2>Useful Resources</h2>
-                    <ul>
-                        <li><a href="https://www.w3schools.com/vue/tryit.php?filename=tryvue_v-bind_1" target="_blank">Vue.js Binding Example</a></li>
-                        <li><a href="https://profile.w3schools.com/login?redirect_url=https%3A%2F%2Fwww.w3schools.com%2Fcss%2Fcss3_flexbox.asp" target="_blank">CSS Flexbox Guide</a></li>
-                        <li><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></li>
-                        <li><a href="https://gemini.google.com/app" target="_blank">Gemini</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=gQojMIhELvM&list=PLoYCgNOIyGAB_8_iq1cL8MVeun7cB6eNc" target="_blank">YouTube - Web Development Tutorials</a></li>
-                    </ul>
-                </div>
             </section>
-
             <aside class="sidebar fadeIn">
                 <h2>Picture Gallery</h2>
                 <table border="1">
@@ -99,6 +61,18 @@
                 </table>
             </aside>
         </main>
+
+        <!-- Resources Section -->
+        <section id="resources">
+            <h2>Useful Resources</h2>
+            <ul>
+                <li><a href="https://www.w3schools.com/vue/tryit.php?filename=tryvue_v-bind_1" target="_blank">Vue.js Binding Example</a></li>
+                <li><a href="https://profile.w3schools.com/login?redirect_url=https%3A%2F%2Fwww.w3schools.com%2Fcss%2Fcss3_flexbox.asp" target="_blank">CSS Flexbox Guide</a></li>
+                <li><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></li>
+                <li><a href="https://gemini.google.com/app" target="_blank">Gemini</a></li>
+                <li><a href="https://www.youtube.com/watch?v=gQojMIhELvM&list=PLoYCgNOIyGAB_8_iq1cL8MVeun7cB6eNc" target="_blank">YouTube Web Development Playlist</a></li>
+            </ul>
+        </section>
 
         <footer class="fadeIn">
             <p>&copy; 2025 Jericho Alba. All rights reserved.</p>
@@ -119,30 +93,6 @@
                 column.classList.add('active');
             });
         });
-
-        // Vue.js for Guestbook
-        const guestbookApp = Vue.createApp({
-            data() {
-                return {
-                    name: '',
-                    message: '',
-                    guestbook: []
-                };
-            },
-            methods: {
-                addMessage() {
-                    if (this.name && this.message) {
-                        this.guestbook.push({
-                            id: Date.now(),
-                            name: this.name,
-                            message: this.message
-                        });
-                        this.name = '';
-                        this.message = '';
-                    }
-                }
-            }
-        }).mount('#guestbook-app');
     </script>
 </body>
 </html>
